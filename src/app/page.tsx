@@ -2,6 +2,7 @@ import About from "./Components/about";
 import Experience from "./Components/experience";
 import Header from "./Components/header";
 import Hero from "./Components/hero";
+import Projects from "./Components/projects";
 import Skills from "./Components/skills";
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
       </section>
       <section className="snap-center">
         <Skills />
+      </section>
+      <section className="snap-start">
+        <Projects />
       </section>
     </main>
   );
