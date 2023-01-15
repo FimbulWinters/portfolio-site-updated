@@ -1,3 +1,4 @@
+import About from "./Components/about";
 import Header from "./Components/header";
 import Hero from "./Components/hero";
 
@@ -7,6 +8,9 @@ export default function Home() {
       <Header />
       <section className="snap-center">
         <Hero />
+      </section>
+      <section className="snap-center">
+        <About />
       </section>
     </main>
   );
