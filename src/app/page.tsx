@@ -1,6 +1,8 @@
 import About from "./Components/about";
+import Experience from "./Components/experience";
 import Header from "./Components/header";
 import Hero from "./Components/hero";
+import Skills from "./Components/skills";
 
 export default function Home() {
   return (
@@ -11,6 +13,12 @@ export default function Home() {
       </section>
       <section className="snap-center">
         <About />
+      </section>
+      <section className="snap-center">
+        <Experience />
+      </section>
+      <section className="snap-center">
+        <Skills />
       </section>
     </main>
   );

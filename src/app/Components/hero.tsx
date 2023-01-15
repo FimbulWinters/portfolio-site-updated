@@ -13,7 +13,7 @@ export default function Hero({}: Props) {
     words: [
       "Hi, my name is Alex Winters.",
       "I'm an ex-probation officer...",
-      "making the switch to a career in software development.",
+      "...making the switch to a career in software development.",
       "Northcoders coding bootcamp graduate",
     ],
     loop: true,
@@ -35,11 +35,11 @@ export default function Hero({}: Props) {
         quality={100}
       />
       <div>
-        <h2 className="text-sm uppercase pb-2 tracking-[15px] text-secondaryText opacity-20">
+        <h2 className="text-xs uppercase pb-2 tracking-[10px] text-secondaryText opacity-20">
           Junior Software Developer
         </h2>
         <h1>
-          <span className="text-textColour">{text}</span>
+          <span className="text-textColour text-lg">{text}</span>
           <Cursor cursorColor="#e5e2ae" />
         </h1>
       </div>
