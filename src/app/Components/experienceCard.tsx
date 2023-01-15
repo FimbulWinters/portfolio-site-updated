@@ -9,7 +9,7 @@ export default function ExperienceCard({}: Props) {
       <Image
         src={pic}
         alt=""
-        className="w-32 h-32 rounded-full object-cover object-center"
+        className="w-32 h-32 rounded-full object-cover object-center shadow-2xl"
       />
       <div className="px-0 md:px-18">
         <h4 className="text-2xl font-light text-textColour opacity-70">
@@ -19,9 +19,21 @@ export default function ExperienceCard({}: Props) {
           Employer
         </h5>
         <div className="flex space-x-2 my-2">
-          <Image src={pic} alt="tech" className="h-10 w-10 rounded-3xl" />
-          <Image src={pic} alt="tech" className="h-10 w-10 rounded-3xl" />
-          <Image src={pic} alt="tech" className="h-10 w-10 rounded-3xl" />
+          <Image
+            src={pic}
+            alt="tech"
+            className="h-10 w-10 rounded-3xl shadow-2xl"
+          />
+          <Image
+            src={pic}
+            alt="tech"
+            className="h-10 w-10 rounded-3x shadow-2xll"
+          />
+          <Image
+            src={pic}
+            alt="tech"
+            className="h-10 w-10 rounded-3xl shadow-2xl"
+          />
         </div>
 
         <p className="py-5 text-secondaryText opacity-30">
