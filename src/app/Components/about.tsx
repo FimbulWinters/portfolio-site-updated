@@ -18,12 +18,17 @@ export default function About({}: Props) {
       <Image
         src={pic}
         alt="pics"
-        className="relative rounded-full h-64 w-64 mx-auto object-cover flex-shrink-0 mb-12"
+        className="relative rounded-full h-32 w-32 mx-auto object-cover flex-shrink-0 mb-12"
       />
       <div className="md: mx-12">
         <h3 className=" tracking-[5px]  text-secondaryText opacity-40 text-sm">
           Here is a brief summary of me...
         </h3>
+        <p className="text-sm mt-4 mx-4 text-left text-secondaryText opacity-20 ">
+          My name is Alex, im relatively new to this field but I feel that I've
+          learnt a lot in a short space of time, and more importantly, im
+          absolutely loving what I do!
+        </p>
         <p className="text-sm mt-4 mx-4 text-left text-secondaryText opacity-20 ">
           My name is Alex, im relatively new to this field but I feel that I've
           learnt a lot in a short space of time, and more importantly, im
