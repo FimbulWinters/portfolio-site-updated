@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type Props = {};
 
-export function ContactForm({}: Props) {
+export default function ContactForm({}: Props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
