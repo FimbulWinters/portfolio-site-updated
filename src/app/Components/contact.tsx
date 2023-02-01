@@ -2,7 +2,7 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { MapPinIcon, PhoneIcon, AtSymbolIcon } from "@heroicons/react/24/solid";
 
-import ContactForm from "./contactForm";
+import { ContactForm } from "./contactForm";
 
 type Props = {};
 
