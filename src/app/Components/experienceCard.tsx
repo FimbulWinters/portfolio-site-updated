@@ -24,23 +24,7 @@ export default function ExperienceCard({ info }: Props) {
         <h5 className="font-bold mt-1 text-secondaryText opacity-70">
           {info.company}
         </h5>
-        <div className="flex space-x-2 my-1">
-          <Image
-            src={pic}
-            alt="tech"
-            className="h-10 w-10 rounded-3xl shadow-2xl"
-          />
-          <Image
-            src={pic}
-            alt="tech"
-            className="h-10 w-10 rounded-3xl shadow-2xl"
-          />
-          <Image
-            src={pic}
-            alt="tech"
-            className="h-10 w-10 rounded-3xl shadow-2xl"
-          />
-        </div>
+        <div className="flex space-x-2 my-1"></div>
 
         <p className="py-5 text-secondaryText opacity-30">
           {`started: ${info.dateStarted}. ended: ${info.dateEnded}`}
@@ -48,7 +32,9 @@ export default function ExperienceCard({ info }: Props) {
         <ul className="list-disc space-y-2 ml-5">
           {info.points.map((point) => {
             return (
-              <li className="text-textColour opacity-70 text-xs">{point}</li>
+              <li className="text-textColour opacity-70 text-xs" key={info._id}>
+                {point}
+              </li>
             );
           })}
         </ul>

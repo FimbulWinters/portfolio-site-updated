@@ -13,7 +13,7 @@ export default async function WorkExperience({}: Props) {
       </h2>
       <div className=" w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory justify-between mx-12 mt-12 scrollbar scrollbar-track-menuColour scrollbar-thumb-hoverColour">
         {experience.map((job) => {
-          return <ExperienceCard info={job} />;
+          return <ExperienceCard info={job} key={job._id} />;
         })}
       </div>
     </div>

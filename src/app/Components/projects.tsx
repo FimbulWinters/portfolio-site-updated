@@ -1,4 +1,5 @@
 import { Project } from "@/pages/api/typings";
+import { urlFor } from "@/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import { fetchProjects } from "utils/fetchProjects";
@@ -16,10 +17,13 @@ export default async function Projects({}: Props) {
       <div className="relative w-full flex overflow-x-scroll justify-between overflow-hidden snap-x snap-mandatory space-x-5 scrollbar scrollbar-track-menuColour scrollbar-thumb-hoverColour">
         {projects.map((project) => {
           return (
-            <div className="flex flex-col rounded-xl items-center space-y-7 justify-around flex-shrink-0 my-12 w-[450px] md:w-[550px] xl:w-[1000px] snap-center bg-menuColour opacity-70 hover:opacity-100 hover:shadow-2xl p-4">
+            <div
+              className="flex flex-col rounded-xl items-center space-y-7 justify-around flex-shrink-0 my-12 w-[450px] md:w-[550px] xl:w-[1000px] snap-center bg-menuColour opacity-70 hover:opacity-100 hover:shadow-2xl p-4"
+              key={project._id}
+            >
               <div>
                 <Image
-                  src={pic}
+                  src={urlFor(project.image).toString()}
                   alt="hello"
                   className="h-32 w-32 rounded-full"
                 />
