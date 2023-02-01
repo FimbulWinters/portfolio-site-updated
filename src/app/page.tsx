@@ -30,15 +30,19 @@ export default function Home() {
         <Hero />
       </section>
       <section className="snap-center" id="about">
+        {/* @ts-expect-error Server Component */}
         <About />
       </section>
       <section className="snap-center" id="experience">
+        {/* @ts-expect-error Server Component */}
         <WorkExperience />
       </section>
       <section className="snap-center" id="skills">
+        {/* @ts-expect-error Server Component */}
         <Skills />
       </section>
       <section className="snap-start" id="projects">
+        {/* @ts-expect-error Server Component */}
         <Projects />
       </section>
       <section className="snap-start" id="contact">
