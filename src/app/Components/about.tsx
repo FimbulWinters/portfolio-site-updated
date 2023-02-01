@@ -1,12 +1,17 @@
+import { PageInfo } from "@/pages/api/typings";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { fetchPageInfo } from "utils/fetchPageInfo";
 // import { readdir } from "fs/promises";
 import pic from "./images/about_me_photos/WhatsApp Image 2023-01-15 at 12.41.39.jpg";
 
 type Props = {};
 
-export default function About({}: Props) {
-  //   const imageURLS = getimages();
+export default async function About({}: Props) {
+  const info: PageInfo = await fetchPageInfo();
+
+  console.log("pageInfo on about page", info);
+
   return (
     <div
       id="about"
@@ -25,14 +30,7 @@ export default function About({}: Props) {
           Here is a brief summary of me...
         </h3>
         <p className="text-sm mt-4 mx-4 text-left text-secondaryText opacity-20 ">
-          My name is Alex, im relatively new to this field but I feel that I've
-          learnt a lot in a short space of time, and more importantly, im
-          absolutely loving what I do!
-        </p>
-        <p className="text-sm mt-4 mx-4 text-left text-secondaryText opacity-20 ">
-          My name is Alex, im relatively new to this field but I feel that I've
-          learnt a lot in a short space of time, and more importantly, im
-          absolutely loving what I do!
+          {info.backgroundInformation}
         </p>
       </div>
     </div>

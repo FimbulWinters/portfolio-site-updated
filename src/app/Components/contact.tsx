@@ -32,6 +32,7 @@ export default function Contact({}: Props) {
       </div>
       <div className="lg:grid lg:grid-cols-4 mx-4 items-start">
         <div className="col-start-1 col-span-2 items-center justify-center">
+          <p className="text-textColour text-lg underline">Email me: </p>
           <ContactForm />
         </div>
       </div>

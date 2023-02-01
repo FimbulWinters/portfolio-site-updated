@@ -5,6 +5,9 @@ import HeroBackground from "./heroBackground";
 import me from "./images/alex+Alex_GettingReady_0021.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { PageInfo } from "@/pages/api/typings";
+import { fetchPageInfo } from "utils/fetchPageInfo";
 
 type Props = {};
 
@@ -29,7 +32,7 @@ export default function Hero({}: Props) {
     >
       <HeroBackground />
       <Image
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        className="relative rounded-full h-64 w-64 mx-auto object-cover"
         src={me}
         alt="picture of me"
         quality={100}
@@ -49,28 +52,7 @@ export default function Hero({}: Props) {
           animate={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 3 }}
           className="flex flex-row items-center"
-        >
-          <Link href="#about" className="mx-2">
-            About
-          </Link>
-          <Link href="#projects" className="mx-2">
-            Projects
-          </Link>
-        </motion.div>
-        <motion.div
-          initial={{ x: -500, opacity: 0, scale: 0.5 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 3 }}
-          className="flex flex-row justify-between items-center"
-        >
-          <Link href="#skills" className="mx-2">
-            Skills
-          </Link>
-
-          <Link href="#experience" className="mx-2">
-            Experience
-          </Link>
-        </motion.div>
+        ></motion.div>
       </div>
     </motion.div>
   );
