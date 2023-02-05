@@ -3,7 +3,7 @@ import { NextApiRequest } from "next";
 import { walkUpBindingElementsAndPatterns } from "typescript";
 require("dotenv").config();
 
-export default function (req: any, res: any) {
+export default function Contact(req: any, res: any) {
   const password = process.env.password;
   const email = process.env.email;
   const nodemailer = require("nodemailer");

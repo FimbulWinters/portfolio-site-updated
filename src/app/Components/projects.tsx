@@ -1,9 +1,8 @@
 import { Project } from "@/pages/api/typings";
-import { urlFor } from "@/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import { fetchProjects } from "utils/fetchProjects";
-import pic from "./images/PXL_20220101_132909071.MP.jpg";
+import coding from "./images/Coding-vs-programming.jpg";
 
 type Props = {};
 
@@ -23,7 +22,7 @@ export default async function Projects({}: Props) {
             >
               <div>
                 <Image
-                  src={urlFor(project.image).toString()}
+                  src={coding}
                   alt="hello"
                   className="h-32 w-32 rounded-full"
                 />
