@@ -17,6 +17,8 @@ export default function ContactForm({}: Props) {
       message,
     };
 
+    setSubmitted(true);
+
     fetch("api/contact", {
       method: "POST",
       headers: {
@@ -69,7 +71,7 @@ export default function ContactForm({}: Props) {
       />
       <button className="bg-textColour rounded-xl h-8" type="submit">
         {" "}
-        Submit
+        {submitted ? "Sucessfully submitted" : "submit"}
       </button>
     </form>
   );

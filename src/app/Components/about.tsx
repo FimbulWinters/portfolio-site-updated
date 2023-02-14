@@ -1,16 +1,22 @@
 import { PageInfo } from "@/pages/api/typings";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { fetchPageInfo } from "utils/fetchPageInfo";
+// import { fetchPageInfo } from "utils/fetchPageInfo";
 // import { readdir } from "fs/promises";
 import pic from "./images/about_me_photos/WhatsApp Image 2023-01-15 at 12.41.39.jpg";
+import { client } from "@/sanity";
 
 type Props = {};
 
-export default async function About({}: Props) {
-  const info: PageInfo = await fetchPageInfo();
+async function getAbout() {
+  const pageInfo = await client.fetch(`*[_type == "pageInfo"][0]
+`);
 
-  console.log("pageInfo on about page", info);
+  return pageInfo;
+  //  pageInfo;
+}
+
+export default async function About({}: Props) {
+  const info: PageInfo = await getAbout();
 
   return (
     <div

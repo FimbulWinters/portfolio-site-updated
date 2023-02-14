@@ -1,11 +1,11 @@
 "use client";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import { fetchPageInfo } from "utils/fetchPageInfo";
+// import { fetchPageInfo } from "utils/fetchPageInfo";
 import { fetchSocials } from "utils/fetchSocials";
 import React, { useState, useEffect } from "react";
 import { Social } from "@/pages/api/typings";
-import Link from "next/link";
+// import Link from "next/link";
 
 type Props = {};
 

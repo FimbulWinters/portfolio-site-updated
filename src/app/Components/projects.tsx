@@ -1,13 +1,21 @@
 import { Project } from "@/pages/api/typings";
 import Image from "next/image";
 import Link from "next/link";
-import { fetchProjects } from "utils/fetchProjects";
+// import { fetchProjects } from "utils/fetchProjects";
 import coding from "./images/Coding-vs-programming.jpg";
+import { client } from "@/sanity";
 
 type Props = {};
 
+async function getProjects() {
+  const projects = await client.fetch(`*[_type == "project"]
+`);
+
+  return projects;
+}
+
 export default async function Projects({}: Props) {
-  const projects: Project[] = await fetchProjects();
+  const projects: Project[] = await getProjects();
   return (
     <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-18 justify-center mx-auto items-center">
       <h2 className="absolute uppercase top-20 tracking-[15px] text-textColour">
