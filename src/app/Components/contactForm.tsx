@@ -71,7 +71,7 @@ export default function ContactForm({}: Props) {
       />
       <button className="bg-textColour rounded-xl h-8" type="submit">
         {" "}
-        {submitted ? "Sucessfully submitted" : "submit"}
+        {submitted ? "Successfully submitted" : "submit"}
       </button>
     </form>
   );
